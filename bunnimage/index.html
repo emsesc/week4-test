@@ -3,17 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>The best form</title>
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-      <div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+  <body>
+      <div class="container h-mt-5">
+          <div class="c-well">
               <h1 id="h1">Give your code some love ❤️</h1>
               <form>
-                  <label>Code: </label>
-                  <input type="text" id="name" name="name" /><br>
-                  <input value="Submit" type="button" />
+                  <label class="c-form-label">Code: </label><br>
+                  <input type="text" id="name" class="c-form-input" name="name" /><br>
+                  <input onclick="getImage()" class="c-btn c-btn--primary" value="Submit" type="button" />
               </form>
               <br/>
-              <div id="output"></div>
+              <div id="output" class="h-mb-4"></div>
+              <img id="coffee" src="giphy.gif" />
+          </div>
         </div>
+        <p style="text-align: center;">Bitprj © 2021</p>
     </body>  
+</html>
