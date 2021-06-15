@@ -8,7 +8,7 @@ async function getImage(event) {
         $('#output').text("Thanks!")
   
         console.log("Posting your image...");
-        const resp = await fetch("https://priscool.azurewebsites.net/api/w3s2?code=5Rjd6l23aoqSnlYG6/9IIaRMVbvVdks7rXxglstZhl9aoi1CjO/ymQ==", {
+        const resp = await fetch("https://priscool.azurewebsites.net/api/w3s3?code=WXnJgVXmLh1VRmcNyZhyr9yy5GSu94iTuEsvSI0chEoHmWazwBK/dg==", {
             method: 'POST',
             headers: {
                 'codename' : username
@@ -16,7 +16,7 @@ async function getImage(event) {
             body: payload
         });
   
-        var data = await resp.json();
+        var data = await resp.text();
         console.log(data);
         $('#output').text("Your image has been stored!")
     } else {
