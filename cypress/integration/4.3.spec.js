@@ -20,6 +20,7 @@ describe('Test Bunnimage', () => {
         cy.get('input[type="text"]').type('mysecret')
         uploadFile(fileName, 'image/jpg', 'input[name="image"]')
         cy.get('input[type="submit"]').click()
+        cy.wait(5000)
         cy.get('#output').contains('Your image has been stored successfully!')    
     })
 })
