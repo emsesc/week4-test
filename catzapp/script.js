@@ -1,5 +1,5 @@
 async function y1k3s() {
-    let url = `${AZURE_URL}&name1=${document.getElementById("name1").value}&name2=${document.getElementById("name2").value}&name3=${document.getElementById("name3").value}&name4=${document.getElementById("name4").value}`
+    let url = `https://priscool.azurewebsites.net/api/w4s6?code=oWyTTMC7Pug2iZdqQXEiEJdsT6kFuR9MDINIq0K3fdd6QdL9xV3HHg==&name1=${document.getElementById("name1").value}&name2=${document.getElementById("name2").value}&name3=${document.getElementById("name3").value}&name4=${document.getElementById("name4").value}`
     let resp = await fetch(url, {
             method: 'GET'
         });
