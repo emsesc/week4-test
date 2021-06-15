@@ -16,11 +16,31 @@ async function getImage(event) {
             body: payload
         });
   
-        var data = await resp.text();
+        var data = await resp.json();
         console.log(data);
-        $('#output').text("Your image has been stored successfully!")
+        $('#output').text("Your image has been stored!")
     } else {
         alert("No name error.")
     }
   }
+    
+    async function downloadImage() {
+      var username = document.getElementById("downloadusername").value;
+      console.log("Attempting to get your pdf...");
+      const resp = await fetch("https://priscool.azurewebsites.net/api/w3s5?code=RMTTWo00OUflS8k//7LR0i4GBLLG88HTf5AFjTXfqYlAZzdHlFC7cQ==", {
+          method: 'GET',
+          headers: {
+              'username' : username
+          },
+      });
+    
+      var data = await resp.json();
+      console.log("PDF link received!")
+      console.log(data.downloadUri)
+      console.log(data.success)
+      const link = data.downloadUri
+      var success = data.success
+    
+      window.open(link, "_self")
+    }
   
